@@ -6,19 +6,19 @@ export const firstCardDisplay = [
     cards: [
       {
         id: 19,
-        title: "Opção 1",
+        title: "A",
         snippet: "Corre o mais rápido possível",
         image: "op1.png"
       },
       {
         id: 20,
-        title: "Opção 2",
+        title: "B",
         snippet: "Sobe na árvore",
         image: "op2.png"
       },
       {
         id: 21,
-        title: "Opção 3",
+        title: "C",
         snippet: "Se finge de morto",
         image: "op3.png"
       }
@@ -31,19 +31,19 @@ export const firstCardDisplay = [
     cards: [
       {
         id: 22,
-        title: "Opção 1",
+        title: "A",
         snippet: "Foge para bem longe",
         image: "op1.png"
       },
       {
         id: 23,
-        title: "Opção 2",
+        title: "B",
         snippet: "Pega o bilhete e foge para bem longe",
         image: "op2.png"
       },
       {
         id: 24,
-        title: "Opção 3",
+        title: "C",
         snippet: "Puxa toda coragem do coração e enfrenta o homem",
         image: "op3.png"
       }
@@ -56,19 +56,19 @@ export const firstCardDisplay = [
     cards: [
       {
         id: 25,
-        title: "Opção 1",
+        title: "A",
         snippet: "Foge e liga para a polícia",
         image: "op1.png"
       },
       {
         id: 26,
-        title: "Opção 2",
+        title: "B",
         snippet: "Amarra o homem e vai ao laboratório",
         image: "op2.png"
       },
       {
         id: 27,
-        title: "Opção 3",
+        title: "C",
         snippet: "Mata o homem, pega a marreta e vai ao laboratório",
         image: "op3.png"
       }

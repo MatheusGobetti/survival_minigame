@@ -17,6 +17,18 @@ export default {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap",
       },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Itim&display=swap"
+      }
     ]
   },
 

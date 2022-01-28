@@ -1,6 +1,10 @@
 <template>
   <div class="card">
-    <img :src="require(`@/assets/images/${card.image || 'not-found.png'}`)" alt="op" class="image">
+    <img
+      :src="require(`@/assets/images/${card.image || 'not-found.png'}`)"
+      alt="op"
+      class="image"
+    />
     <h3 class="header">
       {{ card.title }}
     </h3>
@@ -11,31 +15,42 @@
 </template>
 
 <script>
-  export default {
-    props: ['card']
-  }
+export default {
+  props: ["card"],
+};
 </script>
 
 <style scoped>
-
   .card {
-        width: 31.5%;
-        height: 25rem;
-        border: none;
-        overflow: hidden;
-        padding: 0;
-        cursor: pointer;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+    display: inline-block;
+    width: 33.33333%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: transform 0.3s;
+  }
 
-    }
-    .image {
-        height: 65%;
-        border-radius: 0.5rem;
-    }
-    .header {
-        font-size: 1.15rem;
-        margin-top: 0.4rem;
-    }
-    .snippet {
-        color: grey
-    }
+  .card:hover {
+    transform: scale(0.8);
+  }
+  .image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    border-radius: 0.5rem;
+  }
+  .header {
+    font-size: 1.15rem;
+    text-align: center;
+    font-family: "Luckiest Guy";
+    font-size: 30px;
+  }
+  .snippet {
+    color: grey;
+    font-family: "Itim";
+    text-align: center;
+  }
 </style>
