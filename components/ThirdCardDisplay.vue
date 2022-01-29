@@ -3,7 +3,7 @@
     <h4 class="header">{{ cardsSection.title }}</h4>
     <p class="snippet">{{ cardsSection.snippet }}</p>
     <div class="cards-container">
-      <FirstCard
+      <ThirdCard
         v-for="card in cardsSection.cards"
         :key="card.id"
         :card="card"

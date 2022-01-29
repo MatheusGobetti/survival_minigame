@@ -9,13 +9,15 @@
         Faça as escolhas corretas para sobreviver. Use seu instinto de
         sobrevivência para chegar até o fim desta jornada.
       </p>
-      <button class="button btn">Começar!</button>
+        <NuxtLink :to="`/play/1`"><button class="button btn">Começar!</button></Nuxtlink>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+
+};
 </script>
 
 <style scoped>
@@ -25,6 +27,7 @@ export default {};
     align-items: flex-start;
     justify-content: space-evenly;
     font-family: "Permanent Marker";
+
   }
 
   .box {
@@ -75,11 +78,12 @@ export default {};
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
       rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   }
+
   .button:after {
     position: absolute;
     display: block;
     content: "";
-    width: 100%;
+    width: 50%;
     height: 100%;
     left: -100%;
     clip-path: polygon(10% 0, 70% 0, 90% 100%, 30% 100%);
