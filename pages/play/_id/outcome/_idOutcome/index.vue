@@ -4,8 +4,8 @@
     <div v-if="$route.path.includes('/play/1/outcome/2')" class="answer">
       <span>{{ outcomeA.answer }}</span>
       <!-- Botões verdes para avançar ou voltar -->
-      <span><NuxtLink :to="`/play/1`"><button class="btnC">Voltar</button></Nuxtlink></span>
-      <span><NuxtLink :to="`/play/2`"><button class="btnC">Avançar!</button></Nuxtlink></span>
+      <NuxtLink :to="`/play/1`"><button class="btnC">Voltar</button></Nuxtlink>
+      <NuxtLink :to="`/play/2`"><button class="btnC">Avançar!</button></Nuxtlink>
 
     </div>
 
@@ -13,12 +13,14 @@
     <div v-if="$route.path.includes('/play/2/outcome/3')" class="answer">
       <span>{{ outcomeB.answer }}</span>
       <!-- Botões verdes para avançar ou voltar -->
-      <span><NuxtLink :to="`/play/2`"><button class="btnC">Voltar</button></Nuxtlink></span>
-      <span><NuxtLink :to="`/play/3`"><button class="btnC">Avançar!</button></Nuxtlink></span>
+      <NuxtLink :to="`/play/2`"><button class="btnC">Voltar</button></Nuxtlink>
+      <NuxtLink :to="`/play/3`"><button class="btnC">Avançar!</button></Nuxtlink>
     </div>
 
     <!-- Exibe a resposta da Parte 3 -->
     <div v-if="$route.path.includes('/play/3/outcome/1')" class="answer">
+      <span class="win">{{ outcomeC.answer }}</span>
+
       <!-- Foto do troféu no final -->
       <img
           :src="require(`@/assets/images/trofeu.png`)"
@@ -26,7 +28,6 @@
           class="image"
         />
 
-      <span class="win">{{ outcomeC.answer }}</span>
       <NuxtLink :to="`/`"><button class="btnC">Sair</button></Nuxtlink>
     </div>
 
@@ -36,15 +37,15 @@
     <div v-else>
       <div v-if="$route.path.includes('/play/1/outcome/1') || $route.path.includes('/play/1/outcome/3')" class="answer">
         <span>{{ outcomeA.answer }}</span>
-        <span><NuxtLink :to="`/`"><button class="btnW">Você perdeu!</button></Nuxtlink></span>
+        <NuxtLink :to="`/`"><button class="btnW">Você perdeu!</button></Nuxtlink>
       </div>
       <div v-if="$route.path.includes('/play/2/outcome/1') || $route.path.includes('/play/2/outcome/2')" class="answer">
         <span>{{ outcomeB.answer }}</span>
-        <span><NuxtLink :to="`/`"><button class="btnW">Você perdeu!</button></Nuxtlink></span>
+        <NuxtLink :to="`/`"><button class="btnW">Você perdeu!</button></Nuxtlink>
       </div>
       <div v-if="$route.path.includes('/play/3/outcome/2') || $route.path.includes('/play/3/outcome/3')" class="answer">
         <span>{{ outcomeC.answer }}</span>
-        <span><NuxtLink :to="`/`"><button class="btnW">Você perdeu!</button></Nuxtlink></span>
+        <NuxtLink :to="`/`"><button class="btnW">Você perdeu!</button></Nuxtlink>
       </div>
     </div>
    
@@ -76,9 +77,8 @@
 <style scoped>
 
   span {
-    margin: 200px 0px 0px 0px;
-    height: 300px;
-    padding: 30px;
+    padding: 180px 0px 40px 0px;
+    width: 75%;
   }
 
   .answer {
@@ -95,11 +95,14 @@
 
   .win {
     margin: 0;
-    padding-right: 30px;
+    width: 100%;
   }
 
   .image {
     width: 170px;
+    display: block;
+    margin: auto;
+    padding-bottom: 40px;
   }
 
 .btnW {
@@ -223,6 +226,22 @@
   }
   100% {
     background-position: 0 0;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  span {
+    margin: auto;
+    display: block;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .answer {
+    margin: auto;
+    display: block;
+    justify-items: center;
+    text-align: center;
   }
 }
 

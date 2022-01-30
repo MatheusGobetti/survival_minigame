@@ -119,9 +119,19 @@ export default {
     background-position: 0 0;
   }
 }
-  @media (max-width: 500px) {
-    .FirstCardDisplay {
-      height: 40vh;
-    }
+@media (max-width: 500px) {
+  .FirstCardDisplay {
+    height: 40vh;
   }
+}
+
+@media only screen and (min-width: 360px) {
+  .snippet {
+    margin: auto;
+    display: block;
+    justify-items: center;
+    padding: 0 20% 0;
+    text-align: center;
+  }
+}
 </style>
