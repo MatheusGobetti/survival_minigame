@@ -173,6 +173,7 @@
   cursor: pointer;
   position: relative;
   z-index: 0;
+
 }
 
 .btnC::before {
@@ -215,6 +216,7 @@
   background: #26b413;
   left: 0;
   top: 0;
+  
 }
 
 @keyframes move {

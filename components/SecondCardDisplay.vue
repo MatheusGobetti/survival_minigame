@@ -130,7 +130,7 @@ export default {
     margin: auto;
     display: block;
     justify-items: center;
-    padding: 0 20% 0;
+    padding: 0 20% 30px;
     text-align: center;
   }
 }
