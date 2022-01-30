@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="`/play/outcome/${card.id}`" class="card">
+  <NuxtLink :to="`/play/3/outcome/${card.id}`" class="card">
     <img
       :src="require(`@/assets/images/${card.image || 'not-found.png'}`)"
       alt="op"

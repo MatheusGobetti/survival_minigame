@@ -1,5 +1,5 @@
 <template>
-  <div class="First Card Display container">
+  <div class="Third Card Display container">
     <h4 class="header">{{ cardsSection.title }}</h4>
     <p class="snippet">{{ cardsSection.snippet }}</p>
     <div class="cards-container">
