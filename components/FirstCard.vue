@@ -53,7 +53,7 @@ export default {
     font-size: 30px;
   }
   .snippet {
-    color: grey;
+    color: rgb(105, 105, 105);
     font-family: "Itim";
     text-align: center;
   }

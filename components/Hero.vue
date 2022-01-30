@@ -27,6 +27,7 @@ export default {
     align-items: flex-start;
     justify-content: space-evenly;
     font-family: "Permanent Marker";
+    margin-top: 7em;
 
   }
 

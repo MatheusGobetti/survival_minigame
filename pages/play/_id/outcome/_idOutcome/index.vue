@@ -1,34 +1,44 @@
 <template>
   <div>
     <div v-if="$route.path.includes('/play/1/outcome/2')" class="answer">
-      {{ outcomeA.answer }}
-      <NuxtLink :to="`/play/2`"><button class="btnC">Avançar!</button></Nuxtlink>
+      <span>{{ outcomeA.answer }}</span>
+      <span><NuxtLink :to="`/play/2`"><button class="btnC">Avançar!</button></Nuxtlink></span>
     </div>
 
     <div v-if="$route.path.includes('/play/2/outcome/3')" class="answer">
-      {{ outcomeB.answer }}
-      <NuxtLink :to="`/play/3`"><button class="btnC">Avançar!</button></Nuxtlink>
+      <span>{{ outcomeB.answer }}</span>
+      <span><NuxtLink :to="`/play/3`"><button class="btnC">Avançar!</button></Nuxtlink></span>
     </div>
 
     <div v-if="$route.path.includes('/play/3/outcome/1')" class="answer">
-      {{ outcomeC.answer }}
-      <NuxtLink :to="`/`"><button class="btnC">Ganhou!</button></Nuxtlink>
+
+      <img
+          :src="require(`@/assets/images/trofeu.png`)"
+          alt="tr"
+          class="image"
+        />
+
+      <span class="win">{{ outcomeC.answer }}</span>
+      <NuxtLink :to="`/`"><button class="btnC">Sair</button></Nuxtlink>
+      
+        
+      
     </div>
 
      <!-- ----------------------------------------------------- -->
 
     <div v-else>
       <div v-if="$route.path.includes('/play/1/outcome/1') || $route.path.includes('/play/1/outcome/3')" class="answer">
-        {{ outcomeA.answer }}
-        <NuxtLink :to="`/`"><button class="btnW">Você perdeu!</button></Nuxtlink>
+        <span>{{ outcomeA.answer }}</span>
+        <span><NuxtLink :to="`/`"><button class="btnW">Você perdeu!</button></Nuxtlink></span>
       </div>
       <div v-if="$route.path.includes('/play/2/outcome/1') || $route.path.includes('/play/2/outcome/2')" class="answer">
-        {{ outcomeB.answer }}
-        <NuxtLink :to="`/`"><button class="btnW">Você perdeu!</button></Nuxtlink>
+        <span>{{ outcomeB.answer }}</span>
+        <span><NuxtLink :to="`/`"><button class="btnW">Você perdeu!</button></Nuxtlink></span>
       </div>
       <div v-if="$route.path.includes('/play/3/outcome/2') || $route.path.includes('/play/3/outcome/3')" class="answer">
-        {{ outcomeC.answer }}
-        <NuxtLink :to="`/`"><button class="btnW">Você perdeu!</button></Nuxtlink>
+        <span>{{ outcomeC.answer }}</span>
+        <span><NuxtLink :to="`/`"><button class="btnW">Você perdeu!</button></Nuxtlink></span>
       </div>
     </div>
    
@@ -57,17 +67,34 @@
 
 <style scoped>
 
+  span {
+    margin: 100px 0px 0px 50px;
+    width: 800px;
+    height: 300px;
+    padding: 30px;
+    
+  }
+
   .answer {
+    display: flex;
+    justify-content: space-between;
+
     color: black;
     text-align: center;
-    margin-bottom: 1.5rem;
     font-family: "Itim";
     padding: 0px 300px 0px 300px;
     font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
     align-items: center;
     height: 25em;
+  }
+
+  .win {
+    margin: 0;
+    padding-right: 30px;
+  }
+
+  .image {
+    width: 170px;
   }
 
 .btnW {
