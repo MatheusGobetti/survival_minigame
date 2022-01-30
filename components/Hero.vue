@@ -66,7 +66,8 @@ export default {
   }
   .button {
     font-size: 20px;
-    font-family: "Permanent Marker";
+    font-family: "Itim";
+    text-decoration:underline;
     height: 60px;
     width: 50%;
     display: flex;

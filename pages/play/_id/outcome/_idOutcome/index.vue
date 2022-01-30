@@ -2,11 +2,14 @@
   <div>
     <div v-if="$route.path.includes('/play/1/outcome/2')" class="answer">
       <span>{{ outcomeA.answer }}</span>
+      <span><NuxtLink :to="`/play/1`"><button class="btnC">Voltar</button></Nuxtlink></span>
       <span><NuxtLink :to="`/play/2`"><button class="btnC">Avançar!</button></Nuxtlink></span>
+
     </div>
 
     <div v-if="$route.path.includes('/play/2/outcome/3')" class="answer">
       <span>{{ outcomeB.answer }}</span>
+      <span><NuxtLink :to="`/play/2`"><button class="btnC">Voltar</button></Nuxtlink></span>
       <span><NuxtLink :to="`/play/3`"><button class="btnC">Avançar!</button></Nuxtlink></span>
     </div>
 
@@ -68,17 +71,14 @@
 <style scoped>
 
   span {
-    margin: 100px 0px 0px 50px;
-    width: 800px;
+    margin: 200px 0px 0px 0px;
     height: 300px;
     padding: 30px;
-    
   }
 
   .answer {
     display: flex;
     justify-content: space-between;
-
     color: black;
     text-align: center;
     font-family: "Itim";
