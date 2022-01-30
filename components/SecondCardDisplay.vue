@@ -1,14 +1,16 @@
 <template>
-  <div class="First Card Display container">
+  <div class="Second Card Display container">
     <h4 class="header">{{ cardsSection.title }}</h4>
     <p class="snippet">{{ cardsSection.snippet }}</p>
     <div class="cards-container">
+      <!-- Itera sobre os cards pra trazer os dados respectivos da segunda fase -->
       <SecondCard
         v-for="card in cardsSection.cards"
         :key="card.id"
         :card="card"
       />
     </div>
+    <!-- Botão para voltar na fase anerior -->
     <span class="spanButton"><NuxtLink :to="`/play/1`"><button class="button">Voltar</button></NuxtLink></span>
   </div>
 </template>

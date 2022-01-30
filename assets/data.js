@@ -1,3 +1,4 @@
+// Dados do roteiro do jogo
 export const firstCardDisplay = [
   {
     id: 1,

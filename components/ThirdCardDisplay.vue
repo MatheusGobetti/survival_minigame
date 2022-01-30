@@ -3,12 +3,14 @@
     <h4 class="header">{{ cardsSection.title }}</h4>
     <p class="snippet">{{ cardsSection.snippet }}</p>
     <div class="cards-container">
+      <!-- Itera sobre os cards pra trazer os dados respectivos da terceira fase -->
       <ThirdCard
         v-for="card in cardsSection.cards"
         :key="card.id"
         :card="card"
       />
     </div>
+    <!-- Botão para voltar na fase anterior -->
     <span class="spanButton"><NuxtLink :to="`/play/2`"><button class="button">Voltar</button></NuxtLink></span>
   </div>
 </template>

@@ -1,20 +1,25 @@
 <template>
   <div>
+      <!-- Exibe a resposta da Parte 1 -->
     <div v-if="$route.path.includes('/play/1/outcome/2')" class="answer">
       <span>{{ outcomeA.answer }}</span>
+      <!-- Botões verdes para avançar ou voltar -->
       <span><NuxtLink :to="`/play/1`"><button class="btnC">Voltar</button></Nuxtlink></span>
       <span><NuxtLink :to="`/play/2`"><button class="btnC">Avançar!</button></Nuxtlink></span>
 
     </div>
 
+      <!-- Exibe a resposta da Parte 2 -->
     <div v-if="$route.path.includes('/play/2/outcome/3')" class="answer">
       <span>{{ outcomeB.answer }}</span>
+      <!-- Botões verdes para avançar ou voltar -->
       <span><NuxtLink :to="`/play/2`"><button class="btnC">Voltar</button></Nuxtlink></span>
       <span><NuxtLink :to="`/play/3`"><button class="btnC">Avançar!</button></Nuxtlink></span>
     </div>
 
+    <!-- Exibe a resposta da Parte 3 -->
     <div v-if="$route.path.includes('/play/3/outcome/1')" class="answer">
-
+      <!-- Foto do troféu no final -->
       <img
           :src="require(`@/assets/images/trofeu.png`)"
           alt="tr"
@@ -23,13 +28,11 @@
 
       <span class="win">{{ outcomeC.answer }}</span>
       <NuxtLink :to="`/`"><button class="btnC">Sair</button></Nuxtlink>
-      
-        
-      
     </div>
 
      <!-- ----------------------------------------------------- -->
 
+    <!-- Aqui exibe todas as respostas erradas e o botão vermelho para voltar no início do jogo -->
     <div v-else>
       <div v-if="$route.path.includes('/play/1/outcome/1') || $route.path.includes('/play/1/outcome/3')" class="answer">
         <span>{{ outcomeA.answer }}</span>
@@ -52,6 +55,8 @@
 
 <script>
   export default {
+
+    // Retorna dados armazenados em store/index.js. Cada método corresponde aos dados de uma parte do jogo
     computed: {
      outcomeA() {
        return this.$store.getters.getOutcomeByIdA(this.$route.params.idOutcome);

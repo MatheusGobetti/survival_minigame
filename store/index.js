@@ -48,7 +48,7 @@ export const state = () => (
   }
 )
 
-/* Método que retorna uma função com as informações do JSON que serão necessárias
+/* Métodos que retornam uma função com as informações do JSON que serão necessárias
    na implementação dos outros componentes
 */
 export const getters = {
@@ -65,15 +65,3 @@ export const getters = {
   }
 
 }
-/*
-export const getters = {
-  
-}
-
-export const getters3 = {
-  getOutcomeById3: (state) => (id) => {
-    return state.outcome3.find(outcome3 => outcome3.id == id);
-  }
-}
-
-*/

@@ -1,4 +1,5 @@
 <template>
+  <!-- Cada uma dessas divs chama os CardsDisplays que exibe a pergunta com os cards para escolha -->
   <div>
     <div v-if="$route.path.includes('/play/1')">
       <FirstCardDisplay
@@ -32,6 +33,7 @@ import FirstCardDisplay from '../../../components/FirstCardDisplay.vue';
 import SecondCardDisplay from '../../../components/SecondCardDisplay.vue';
 import ThirdCardDisplay from '../../../components/ThirdCardDisplay.vue';
 export default {
+  // Trazer dados dos cards
   components: { FirstCardDisplay, SecondCardDisplay, ThirdCardDisplay },
   data() {
     return {
