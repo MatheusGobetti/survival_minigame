@@ -34,7 +34,7 @@ export default {
   
   target: 'static',
   router: {
-    base: '/survival_minigame/'
+    base: '/'
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
